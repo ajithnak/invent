@@ -1,0 +1,12 @@
+.home2{
+    background-color: #EAEDED;
+}
+.row2{
+    display: flex;
+    z-index: 1;
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    justify-content: space-evenly;
+}
