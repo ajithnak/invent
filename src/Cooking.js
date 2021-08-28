@@ -1,49 +1,80 @@
 import React from 'react';
-import "./Cooking.css";
+import './Cooking.css';
 import Product from './Product';
 
-function Cooking() {
+class Cooking extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+    this.addToBasket = this.addToBasket.bind(this);
+    this.getData = this.getData.bind(this);
+  }
+  addToBasket = (dispatch, item) => {
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item,
+      id: item.id,
+    });
+  };
+  getData = () => {
+    fetch('http://localhost:3001/Product?type=cooking')
+      .then((res) => res.json())
+      .then((i) => this.setState({ data: i }));
+  };
+  componentDidMount() {
+    this.getData();
+  }
+  render() {
+    // console.log(this.state.data);
     return (
-        <div className="home2">
-           <div className="row2">
-            <Product
-                id="1"
-                title="Daawat Rozana Super Basmati Rice, 5kg"
-                price={299}
-                rating={4}
-                stock={5}
-                image="https://m.media-amazon.com/images/I/810jp1zceeL._AC_UL480_FMwebp_QL65_.jpg"
-            />
-            <Product
-                id="2"
-                title="Saffola Active Refined Cooking oil | 5 Litre jar"
-                price={948}
+      <div style={{ marginTop: '5%' }} className='container'>
+        <div class='row row-cols-1 row-cols-md-2 g-4'>
+          {this.state.data.map((i, index) => {
+            return (
+              <Product
+                id={i.id}
+                title={i.title}
+                image={i.image}
+                price={i.price}
                 rating={5}
-                stock={5}
-                image="https://m.media-amazon.com/images/I/615itlClo5L._AC_UL480_FMwebp_QL65_.jpg"
+                stock={i.stock}
+                addToBasket={this.addToBasket}
+              />
+            );
+          })}
+          <div class='card bg-light text-white'>
+            <img
+              style={{ width: '50%', height: 'auto', marginTop: '4%' }}
+              src={this.state.data[0]?.image}
+              class='card-img-top rounded mx-auto d-block'
+              alt={`food_${1}`}
             />
+            <div
+              class='card-img-overlay'
+              id='2'
+              onMouseEnter={() => {
+                document.getElementById('2').style.backgroundImage =
+                  'linear-gradient(black, rgba(0,0,0,0))';
+              }}
+              onMouseLeave={() =>
+                (document.getElementById('2').style.backgroundImage = '')
+              }
+            >
+              <h5 class='card-title'>Card title</h5>
+              <p class='card-text'>
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class='card-text'>Last updated 3 mins ago</p>
             </div>
-            <div className="row2">
-            <Product
-                id="3"
-                title="Pillsbury Atta Wheat Grains,5 kgg"
-                price={219}
-                rating={5}
-                stock={5}
-                image="https://m.media-amazon.com/images/I/71VE6FoP-nL._AC_UL480_FMwebp_QL65_.jpg"
-            />
-            <Product
-                id="4"
-                title="Tata Sampann Moong Dal Split |, 1kg"
-                price={152}
-                rating={4}
-                stock={5}
-                image="https://m.media-amazon.com/images/I/71AdhVOWfXL._AC_UL480_FMwebp_QL65_.jpg"
-            />
-            </div>
-            </div> 
-    )
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-
-export default Cooking
+export default Cooking;

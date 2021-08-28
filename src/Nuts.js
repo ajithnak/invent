@@ -1,53 +1,80 @@
 import React from 'react';
-import "./Nuts.css";
+import './Nuts.css';
 import Product from './Product';
 
-function Nuts() {
+class Nuts extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+    this.addToBasket = this.addToBasket.bind(this);
+    this.getData = this.getData.bind(this);
+  }
+  addToBasket = (dispatch, item) => {
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item,
+      id: item.id,
+    });
+  };
+  getData = () => {
+    fetch('http://localhost:3001/Product?type=nuts')
+      .then((res) => res.json())
+      .then((i) => this.setState({ data: i }));
+  };
+  componentDidMount() {
+    this.getData();
+  }
+  render() {
+    // console.log(this.state.data);
     return (
-      <div className="home3">
-      <div className="row3">
-       <Product
-           id="9"
-           title="Tata Sampann Chilli Powder, 200g"
-           price={42}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/61Rpon5gKEL._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       <Product
-           id="10"
-           title="Tata Sampann Coriander Powder Masala, 200g"
-           price={52}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/613XDdQferL._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       </div>
-       <div className="row3">
-       <Product
-           id="11"
-           title="Amazon Brand - Solimo Premium Almonds, 500g"
-           price={141}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/81-8rQFKVsL._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       <Product
-           id="12"
-           title="Amazon Brand - Solimo Premium Cashews, 250g"
-           price={270}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/41XmsWyYlOL._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       </div>
-       </div> 
-    )
+      <div style={{ marginTop: '5%' }} className='container'>
+        <div class='row row-cols-1 row-cols-md-2 g-4'>
+          {this.state.data.map((i, index) => {
+            return (
+              <Product
+                id={i.id}
+                title={i.title}
+                image={i.image}
+                price={i.price}
+                rating={5}
+                stock={i.stock}
+                addToBasket={this.addToBasket}
+              />
+            );
+          })}
+          <div class='card bg-light text-white'>
+            <img
+              style={{ width: '50%', height: 'auto', marginTop: '4%' }}
+              src={this.state.data[0]?.image}
+              class='card-img-top rounded mx-auto d-block'
+              alt={`food_${1}`}
+            />
+            <div
+              class='card-img-overlay'
+              id='2'
+              onMouseEnter={() => {
+                document.getElementById('2').style.backgroundImage =
+                  'linear-gradient(black, rgba(0,0,0,0))';
+              }}
+              onMouseLeave={() =>
+                (document.getElementById('2').style.backgroundImage = '')
+              }
+            >
+              <h5 class='card-title'>Card title</h5>
+              <p class='card-text'>
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class='card-text'>Last updated 3 mins ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-
-
-
-
-
-export default Nuts
+export default Nuts;

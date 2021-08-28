@@ -1,12 +1,48 @@
 {
   "Product": [
     {
+      "type": "cooking",
+      "id": 1,
+      "title": "Daawat Rozana Super Basmati Rice, 5kg",
+      "price": 299,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/810jp1zceeL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "cooking",
+      "id": 2,
+      "title": "Saffola Active Refined Cooking oil | 5 Litre jar",
+      "price": 948,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/615itlClo5L._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "cooking",
+      "id": 3,
+      "title": "Pillsbury Atta Wheat Grains,5 kg",
+      "price": 219,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/71VE6FoP-nL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "cooking",
+      "id": 4,
+      "title": "Tata Sampann Moong Dal Split |, 1kg",
+      "price": 152,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/71AdhVOWfXL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
       "type": "food",
       "id": 5,
       "title": "MTR Dosa Breakfast Mix, 500g",
       "price": 94,
       "rating": 4,
-      "stock": 5,
+      "stock": 4,
       "image": "https://m.media-amazon.com/images/I/71KWPtZxk9L._AC_UL480_FMwebp_QL65_.jpg"
     },
     {
@@ -15,7 +51,7 @@
       "title": "Maggi Pazzta Masala Penne, 65g",
       "price": 21,
       "rating": 4,
-      "stock": 5,
+      "stock": 4,
       "image": "https://m.media-amazon.com/images/I/81xadE2ZfXL._AC_UL480_FMwebp_QL65_.jpg"
     },
     {
@@ -35,6 +71,78 @@
       "rating": 4,
       "stock": 5,
       "image": "https://m.media-amazon.com/images/I/71cqU2ZyPNL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "nuts",
+      "id": 9,
+      "title": "Tata Sampann Chilli Powder, 200g",
+      "price": 42,
+      "rating": 4,
+      "stock": 4,
+      "image": "https://m.media-amazon.com/images/I/61Rpon5gKEL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "nuts",
+      "id": 10,
+      "title": "Tata Sampann Coriander Powder Masala, 200g",
+      "price": 52,
+      "rating": 4,
+      "stock": 4,
+      "image": "https://m.media-amazon.com/images/I/613XDdQferL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "nuts",
+      "id": 11,
+      "title": "Amazon Brand - Solimo Premium Almonds, 500g",
+      "price": 141,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/81-8rQFKVsL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "nuts",
+      "id": 12,
+      "title": "Amazon Brand - Solimo Premium Cashews, 250g",
+      "price": 270,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/41XmsWyYlOL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "beverages",
+      "id": 13,
+      "title": "Tata Tea Gold Care, 500 g",
+      "price": 240,
+      "rating": 4,
+      "stock": 4,
+      "image": "https://m.media-amazon.com/images/I/61c0SDhMlVL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "beverages",
+      "id": 14,
+      "title": "BRU Instant Coffee, 100g",
+      "price": 170,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/61ArPyMg16L._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "beverages",
+      "id": 15,
+      "title": "B Natural Guava Juice, 1L (Pack of 2)",
+      "price": 176,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/715h2FpT5VL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "beverages",
+      "id": 16,
+      "title": "B Natural Orange+ Juice, 1L (Pack of 2)",
+      "price": 200,
+      "rating": 4,
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/71P63uq2DZL._AC_UL480_FMwebp_QL65_.jpg"
     }
   ]
 }

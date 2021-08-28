@@ -1,52 +1,80 @@
 import React from 'react';
-import "./Beverages.css";
+import './Beverages.css';
 import Product from './Product';
 
-function Beverages() {
+class Beverages extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [],
+    };
+    this.addToBasket = this.addToBasket.bind(this);
+    this.getData = this.getData.bind(this);
+  }
+  addToBasket = (dispatch, item) => {
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item,
+      id: item.id,
+    });
+  };
+  getData = () => {
+    fetch('http://localhost:3001/Product?type=beverages')
+      .then((res) => res.json())
+      .then((i) => this.setState({ data: i }));
+  };
+  componentDidMount() {
+    this.getData();
+  }
+  render() {
+    // console.log(this.state.data);
     return (
-      <div className="home4">
-      <div className="row4">
-       <Product
-           id="13"
-           title="Tata Tea Gold Care, 500 g"
-           price={240}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/61c0SDhMlVL._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       <Product
-           id="14"
-           title="BRU Instant Coffee, 100g"
-           price={170}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/61ArPyMg16L._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       </div>
-       <div className="row4">
-       <Product
-           id="15"
-           title="B Natural Guava Juice, 1L (Pack of 2)"
-           price={176}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/715h2FpT5VL._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       <Product
-           id="16"
-           title="B Natural Orange+ Juice, 1L (Pack of 2)"
-           price={208}
-           rating={4}
-           stock={5}
-           image="https://m.media-amazon.com/images/I/71P63uq2DZL._AC_UL480_FMwebp_QL65_.jpg"
-       />
-       </div>
-       </div> 
-    )
+      <div style={{ marginTop: '5%' }} className='container'>
+        <div class='row row-cols-1 row-cols-md-2 g-4'>
+          {this.state.data.map((i, index) => {
+            return (
+              <Product
+                id={i.id}
+                title={i.title}
+                image={i.image}
+                price={i.price}
+                rating={5}
+                stock={i.stock}
+                addToBasket={this.addToBasket}
+              />
+            );
+          })}
+          <div class='card bg-light text-white'>
+            <img
+              style={{ width: '50%', height: 'auto', marginTop: '4%' }}
+              src={this.state.data[0]?.image}
+              class='card-img-top rounded mx-auto d-block'
+              alt={`food_${1}`}
+            />
+            <div
+              class='card-img-overlay'
+              id='2'
+              onMouseEnter={() => {
+                document.getElementById('2').style.backgroundImage =
+                  'linear-gradient(black, rgba(0,0,0,0))';
+              }}
+              onMouseLeave={() =>
+                (document.getElementById('2').style.backgroundImage = '')
+              }
+            >
+              <h5 class='card-title'>Card title</h5>
+              <p class='card-text'>
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+              <p class='card-text'>Last updated 3 mins ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-
-
-
-
-export default Beverages
+export default Beverages;
