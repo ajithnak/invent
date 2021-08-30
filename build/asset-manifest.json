@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/invent/static/css/main.6893fe9f.chunk.css",
-    "main.js": "/invent/static/js/main.7cab07fe.chunk.js",
-    "main.js.map": "/invent/static/js/main.7cab07fe.chunk.js.map",
+    "main.js": "/invent/static/js/main.af8bbfce.chunk.js",
+    "main.js.map": "/invent/static/js/main.af8bbfce.chunk.js.map",
     "runtime-main.js": "/invent/static/js/runtime-main.9033bb03.js",
     "runtime-main.js.map": "/invent/static/js/runtime-main.9033bb03.js.map",
     "static/css/2.e1d0cdeb.chunk.css": "/invent/static/css/2.e1d0cdeb.chunk.css",
-    "static/js/2.be275d3c.chunk.js": "/invent/static/js/2.be275d3c.chunk.js",
-    "static/js/2.be275d3c.chunk.js.map": "/invent/static/js/2.be275d3c.chunk.js.map",
+    "static/js/2.2b2627d1.chunk.js": "/invent/static/js/2.2b2627d1.chunk.js",
+    "static/js/2.2b2627d1.chunk.js.map": "/invent/static/js/2.2b2627d1.chunk.js.map",
     "static/js/3.ff328687.chunk.js": "/invent/static/js/3.ff328687.chunk.js",
     "static/js/3.ff328687.chunk.js.map": "/invent/static/js/3.ff328687.chunk.js.map",
     "index.html": "/invent/index.html",
     "static/css/2.e1d0cdeb.chunk.css.map": "/invent/static/css/2.e1d0cdeb.chunk.css.map",
     "static/css/main.6893fe9f.chunk.css.map": "/invent/static/css/main.6893fe9f.chunk.css.map",
-    "static/js/2.be275d3c.chunk.js.LICENSE.txt": "/invent/static/js/2.be275d3c.chunk.js.LICENSE.txt",
+    "static/js/2.2b2627d1.chunk.js.LICENSE.txt": "/invent/static/js/2.2b2627d1.chunk.js.LICENSE.txt",
     "static/media/bootstrap-icons.css": "/invent/static/media/bootstrap-icons.dfd0ea12.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.9033bb03.js",
     "static/css/2.e1d0cdeb.chunk.css",
-    "static/js/2.be275d3c.chunk.js",
+    "static/js/2.2b2627d1.chunk.js",
     "static/css/main.6893fe9f.chunk.css",
-    "static/js/main.7cab07fe.chunk.js"
+    "static/js/main.af8bbfce.chunk.js"
   ]
 }
