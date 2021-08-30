@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Home() {
   return (
@@ -101,11 +101,11 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/cooking'>
+                  <NavLink to='/cooking'>
                     <span className='btn btn-primary text-wrap'>
                       View Details
                     </span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -120,9 +120,9 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/nuts'>
+                  <NavLink to='/nuts'>
                     <span className='btn btn-primary'>View Details</span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -137,9 +137,9 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/beverages'>
+                  <NavLink to='/beverages'>
                     <span className='btn btn-primary'>View Details</span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -154,9 +154,9 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/food'>
+                  <NavLink to='/food'>
                     <span className='btn btn-primary'>View Details</span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -171,9 +171,9 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/nuts'>
+                  <NavLink to='/nuts'>
                     <span className='btn btn-primary'>View Details</span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -188,9 +188,9 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/cooking'>
+                  <NavLink to='/cooking'>
                     <span className='btn btn-primary'>View Details</span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -205,9 +205,9 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/food'>
+                  <NavLink to='/food'>
                     <span className='btn btn-primary'>View Details</span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -222,9 +222,9 @@ function Home() {
               <div className='card-body'>
                 <p className='card-text'></p>
                 <div className='d-grid gap-2 col-6 mx-auto'>
-                  <Link to='/beverages'>
+                  <NavLink to='/beverages'>
                     <span className='btn btn-primary '>View Details</span>
-                  </Link>
+                  </NavLink>
                 </div>
               </div>
             </div>
