@@ -1,6 +1,5 @@
 export const initialState = {
   basket: [],
-  user: null,
 };
 export const getBasketTotal = (basket) =>
   basket?.reduce((amount, item) => item.price + amount, 0);
@@ -26,6 +25,15 @@ const reducer = (state, action) => {
         ...updatedItem,
       };
     case 'REMOVE_FROM_BASKET':
+
+      fetch('http://localhost:3001/Product/' + action.id, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({ stock: action.stock + 1 }),
+      });
       let newBasket = [...state.basket];
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id

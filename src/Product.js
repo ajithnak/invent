@@ -18,6 +18,13 @@ function Product(props) {
         <div class='card-body'>
           <h5 class='card-title'>{title}</h5>
           <p class='card-text'>Price: {price}</p>
+          <p class='card-text1'>Rating: {
+            Array(rating)
+            .fill()
+            .map((_) => (
+            <p>⭐</p>
+            ))
+          }</p>
           <p class='card-text'>Stock: {stockNum}</p>
           {stockNum === 0 ? (
             <div className='d-grid gap-2 col-6 mx-auto'>

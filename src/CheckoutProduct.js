@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './CheckoutProduct.css';
 import { useStateValue } from './StateProvider';
 
-function CheckoutProduct({ id, title, image, price, rating }) {
+function CheckoutProduct({ id, title, image, price, rating,stock }) {
   const [{}, dispatch] = useStateValue();
+  const [stockNum, setStockNum] = useState(stock);
   console.log(id, title, image, price, rating);
   const removeFromBasket = () => {
     dispatch({
       type: 'REMOVE_FROM_BASKET',
+      stock,
       id: id,
     });
   };
@@ -30,7 +32,9 @@ function CheckoutProduct({ id, title, image, price, rating }) {
         </div>
         <div className='d-grid gap-2 d-md-block'>
           <button
-            onClick={removeFromBasket}
+            onClick={() => {removeFromBasket (dispatch);
+              setStockNum(stockNum + 1);
+               }}
             className='btn btn-primary'
             type='button'
           >

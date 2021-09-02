@@ -4,6 +4,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './Header.css';
 import { useStateValue } from './StateProvider';
 import { Link } from 'react-router-dom';
+import Searchbox from './Searchbox';
 
 function Header() {
   const [{ basket }] = useStateValue();
@@ -88,18 +89,9 @@ function Header() {
               />
             </Link>
           </span>
-         
-          <form className='d-flex'>
-            <input
-              className='form-control me-2'
-              type='search'
-              placeholder='Search'
-              aria-label='Search'
-            />
-            <button className='btn btn-danger' type='submit'>
-              Search
-            </button>
-          </form>
+         <div className="data">
+          <Searchbox />
+          </div>
 
           <Link to='/checkout'>
             <div className='basket'>

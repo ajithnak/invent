@@ -25,6 +25,6 @@
     object-fit: contain;
     margin-bottom: 15px;
 }
-.product__rating{
+.card-text1{
     display: flex;
 }

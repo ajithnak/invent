@@ -1,55 +1,79 @@
-import React from 'react';
-import './Food.css';
-import Product from './Product';
 
-class Searchbox extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Searchbox.css';
+import SearchProduct from "./SearchProduct";
+
+class Searchbox extends React.Component  {
+    constructor(props) {
+      super(props);
+      this.state = {
+        filteredData: [],
+      };
+      
+      this.getData = this.getData.bind(this);
+    }
+    getData = (q) => {
+      fetch('http://localhost:3001/Product?title_like='+q)
+        .then((res) => res.json())
+        .then((i) => this.setState({ filteredData: i }));
     };
-    this.addToBasket = this.addToBasket.bind(this);
-    this.getData = this.getData.bind(this);
-  }
-  addToBasket = (dispatch, item) => {
-    dispatch({
-      type: 'ADD_TO_BASKET',
-      item,
-      id: item.id,
-    });
-  };
-  getData = () => {
-    fetch('http://localhost:3001/Product')
-      .then((res) => res.json())
-      .then((i) => this.setState({ data: i }));
-  };
-  componentDidMount() {
-    this.getData();
-  }
-  render() {
-    // console.log(this.state.data);
-    return (
-      <div style={{ marginTop: '5%' }} className='container'>
-        <div class='row row-cols-1 row-cols-md-2 g-4'>
-          {this.state.data.map((i, index) => {
-            return (
-              <Product
-                id={i.id}
-                title={i.title}
-                image={i.image}
-                price={i.price}
-                rating={5}
-                stock={i.stock}
-                addToBasket={this.addToBasket}
-              />
-            );
-          })}
-          
-          
+    componentDidMount() {
+      this.getData();
+    }
+    render()
+  {
+    const handleSearch = (event) => {
+      let value = event.target.value.toLowerCase()
+      this.getData(value);
+
+    }
+  return (
+    <div className="search">
+    <div className='searchInputs'>
+    
+            <div class="btn-group">
+       <div  id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"  >
+    
+      <input 
+              class="form-control me-2"
+              type='search'
+              placeholder='Search'
+              aria-label='Search'
+              onChange={handleSearch}
+            />
+  </div>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+    <li><div className="dataResult" >
+      
+        {this.state.filteredData.map((i,key ) => {
+          return( <a className="dataItem"  target="_blank" > 
+          <Link
+       to={{
+    pathname: "/search/"+i.id,
+    state: { fromDashboard: true }
+  }}
+>
+{i.title}</Link> </a>
+          )}
+        )}
         </div>
-      </div>
-    );
-  }
+        </li>
+    
+  </ul>
+</div>
+    
+</div>
+ </div>
+    
+    
+  );
+}
 }
 
 export default Searchbox;
+
+
+
+

@@ -16,7 +16,7 @@
     font-size: 17px;
     font-weight: 800;
 }
-.checkoutProduct__rating{
+.product__rating{
     display: flex;
 }
 .checkoutProduct__info > button{
