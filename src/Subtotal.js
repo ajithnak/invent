@@ -3,6 +3,7 @@ import "./Subtotal.css";
 import {useStateValue} from "./StateProvider";
 import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from './Reducer';
+import Print from './Print';
 function Subtotal() {
     const[{basket}, dispatch] = useStateValue();
     return (
@@ -24,7 +25,9 @@ function Subtotal() {
             thousandSeparator={true}
             prefix={"₹"}
             />
-            <button>Proceed to Checkout</button>
+            <div className="generate">
+            <Print/>
+            </div>
         </div>
     );
     

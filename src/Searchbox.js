@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Searchbox.css';
-import SearchProduct from "./SearchProduct";
 
 class Searchbox extends React.Component  {
     constructor(props) {
