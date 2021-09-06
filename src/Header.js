@@ -89,6 +89,11 @@ function Header() {
               />
             </Link>
           </span>
+          <Link to="/add">
+          <div>
+          <button type="button" class="btn btn-secondary btn-group me-2">AddProduct</button>
+          </div>
+          </Link>
          <div className="data">
           <Searchbox />
           </div>

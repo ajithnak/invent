@@ -143,6 +143,15 @@
       "rating": 4,
       "stock": 5,
       "image": "https://m.media-amazon.com/images/I/71P63uq2DZL._AC_UL480_FMwebp_QL65_.jpg"
+    },
+    {
+      "type": "food",
+      "id": 17,
+      "title": "pasta",
+      "image": "https://m.media-amazon.com/images/I/81xadE2ZfXL._AC_UL480_FMwebp_QL65_.jpg",
+      "rating": 5,
+      "price": 20,
+      "stock": 5
     }
   ]
 }

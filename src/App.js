@@ -9,6 +9,7 @@ import Nuts from './Nuts';
 import Beverages from './Beverages';
 import Checkout from './Checkout';
 import SearchProduct from './SearchProduct';
+import AddProduct from './AddProduct';
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path='/search/:id' exact>
             <SearchProduct />
+          </Route>
+          <Route path='/add' exact>
+            <AddProduct/>
           </Route>
         </Switch>
       </div>
