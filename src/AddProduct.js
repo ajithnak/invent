@@ -7,8 +7,8 @@ export default class AddProduct extends React.Component {
     super(props);
     this.state= { 
       payload: {
-        type:"",
-        id:"",
+        type: "",
+        id: "",
         title: "",
         image: "",
         rating: "",
@@ -29,7 +29,6 @@ changeHandler= (e) => {
   })}
 
 onSubmit=() =>{
-console.log(this.state.payload);
 fetch('http://localhost:3001/product', {
   method: 'POST',
   headers: {

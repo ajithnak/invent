@@ -2,7 +2,7 @@ import React from 'react';
 import './SearchProduct.css';
 import Product from './Product';
 
-class Cooking extends React.Component {
+class SearchProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,8 +28,6 @@ class Cooking extends React.Component {
   }
   render() 
   {
-    //console.log(this.props);
-    // console.log(this.state.data);
     return (
       <div style={{ marginTop: '5%' }} className='container'>
         <div class='row row-cols-1 row-cols-md-2 g-4'>
@@ -54,4 +52,4 @@ class Cooking extends React.Component {
   }
 }
 
-export default Cooking;
+export default SearchProduct;

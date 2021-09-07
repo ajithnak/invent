@@ -10,6 +10,8 @@ import Beverages from './Beverages';
 import Checkout from './Checkout';
 import SearchProduct from './SearchProduct';
 import AddProduct from './AddProduct';
+import EditProduct from './EditProduct';
+import EditData from "./EditData";
 
 function App() {
   return (
@@ -40,6 +42,12 @@ function App() {
           </Route>
           <Route path='/add' exact>
             <AddProduct/>
+          </Route>
+          <Route path='/detail/:id' exact>
+             <EditProduct/>
+          </Route>
+          <Route path='/detail/edit/:id' exact>
+            <EditData/>
           </Route>
         </Switch>
       </div>

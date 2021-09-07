@@ -5,7 +5,6 @@ import { useStateValue } from './StateProvider';
 function CheckoutProduct({ id, title, image, price, rating,stock }) {
   const [{}, dispatch] = useStateValue();
   const [stockNum, setStockNum] = useState(stock);
-  console.log(id, title, image, price, rating);
   const removeFromBasket = () => {
     dispatch({
       type: 'REMOVE_FROM_BASKET',
@@ -33,7 +32,7 @@ function CheckoutProduct({ id, title, image, price, rating,stock }) {
         <div className='d-grid gap-2 d-md-block'>
           <button
             onClick={() => {removeFromBasket (dispatch);
-              setStockNum(stockNum + 1);
+              setStockNum(parseInt(stockNum) + 1);
                }}
             className='btn btn-primary'
             type='button'

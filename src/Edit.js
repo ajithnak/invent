@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Product.css';
 import { useStateValue } from './StateProvider';
 
-function Product(props) {
+function Edit(props) {
   const { id, title, image, price, rating, stock, addToBasket } = props;
   const [stockNum, setStockNum] = useState(stock);
   const [dummy, dispatch] = useStateValue();
@@ -34,6 +33,7 @@ function Product(props) {
               </button>
             </div>
           ) : (
+            <>
             <div className='d-grid gap-2 col-6 mx-auto'>
               <button
                 onClick={() => {
@@ -52,13 +52,21 @@ function Product(props) {
               >
                 Add to Cart
               </button>
-             <Link to ={{pathname:"/detail/"+id,
-                     state:{fromDashboard : true}}}>
-             <div className='d-grid gap-2 col-6 mx-auto'>
-              <button className="btn btn-primary" type='button'>View details</button>
               </div>
-             </Link>
+              <div className='d-grid gap-2 col-6 mx-auto'>
+              <Link className="btn btn-primary" to ={{pathname:"/detail/edit/"+id,
+                     state:{fromDashboard : true}}}>
+              Edit
+          
+            </Link>
             </div>
+              <div className='d-grid gap-2 col-6 mx-auto'>
+              <button onClick={() => {
+                fetch(`http://localhost:3001/Product/${id}`, {method: 'DELETE', headers: { 'Content-Type': 'application/json' } 
+                }).then(() => window.location.href="/")
+              }} className="btn btn-primary" type='button'>Delete</button>
+            </div> 
+          </>
           )}
         </div>
       </div>
@@ -66,4 +74,4 @@ function Product(props) {
   );
 }
 
-export default Product;
+export default Edit;
