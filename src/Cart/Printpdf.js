@@ -1,7 +1,7 @@
 import React from 'react';
 import jsPDF from "jspdf";
 import "jspdf-autotable";
-import './App.css';
+import '../App.css';
 
 class Printpdf extends React.Component {
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import './SearchProduct.css';
+import './Beverages.css';
 import Product from './Product';
 
-class SearchProduct extends React.Component {
+class Beverages extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,15 +19,14 @@ class SearchProduct extends React.Component {
     });
   };
   getData = () => {
-    fetch('http://localhost:3001/Product/'+ window.location.hash.split("/")[2])
+    fetch('http://localhost:3001/Product?type=beverages')
       .then((res) => res.json())
-      .then((i) => this.setState({ data: [i] }));
+      .then((i) => this.setState({ data: i }));
   };
   componentDidMount() {
     this.getData();
   }
-  render() 
-  {
+  render() {
     return (
       <div style={{ marginTop: '5%' }} className='container'>
         <div class='row row-cols-1 row-cols-md-2 g-4'>
@@ -38,18 +37,16 @@ class SearchProduct extends React.Component {
                 title={i.title}
                 image={i.image}
                 price={i.price}
-                rating={5}
+                rating={parseInt(i.rating)}
                 stock={i.stock}
                 addToBasket={this.addToBasket}
               />
             );
           })}
-          
-            </div>
-          </div>
-    
+        </div>
+      </div>
     );
   }
 }
 
-export default SearchProduct;
+export default Beverages;

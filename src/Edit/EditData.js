@@ -1,6 +1,6 @@
 import React from 'react';
 import "./AddProduct.css";
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export default class AddProduct extends React.Component {
   constructor(props) {
@@ -48,7 +48,7 @@ onSubmit=(e) =>{
   render(){
     return (
 
-        <div> hello,
+        <div>
              {this.state.data ? <form >
         <div className="home5 " style={{ marginTop: '5%', width:"50rem", marginLeft:"15%"}}>
 
@@ -87,11 +87,10 @@ onSubmit=(e) =>{
   
   </input>
 </div>
-
+<Link to="/">
 <button className="btn btn-primary" type="submit" onClick={this.onSubmit} >Update</button>
-
+</Link>
         </div>
-            
         </form> : "Loading..."}
         </div>
     )

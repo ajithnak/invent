@@ -77,7 +77,7 @@
       "id": 9,
       "title": "Tata Sampann Chilli Powder, 200g",
       "price": 42,
-      "rating": 4,
+      "rating": "5",
       "stock": 5,
       "image": "https://m.media-amazon.com/images/I/61Rpon5gKEL._AC_UL480_FMwebp_QL65_.jpg"
     },
@@ -86,7 +86,7 @@
       "id": 10,
       "title": "Tata Sampann Coriander Powder Masala, 200g",
       "price": 52,
-      "rating": 4,
+      "rating": "5",
       "stock": 5,
       "image": "https://m.media-amazon.com/images/I/613XDdQferL._AC_UL480_FMwebp_QL65_.jpg"
     },

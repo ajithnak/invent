@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './Header';
+import Header from '../src/Header/Header';
 import Home from './Home';
-import Cooking from './Cooking';
-import Food from './Food';
-import Nuts from './Nuts';
-import Beverages from './Beverages';
-import Checkout from './Checkout';
-import SearchProduct from './SearchProduct';
-import AddProduct from './AddProduct';
-import EditProduct from './EditProduct';
-import EditData from "./EditData";
+import Cooking from '../src/Product/Cooking';
+import Food from '../src/Product/Food';
+import Nuts from '../src/Product/Nuts';
+import Beverages from '../src/Product/Beverages';
+import Checkout from '../src/Cart/Checkout';
+import SearchProduct from '../src/Header/SearchProduct';
+import AddProduct from '../src/Edit/AddProduct';
+import EditProduct from '../src/Edit/EditProduct';
+import EditData from "../src/Edit/EditData";
 
 function App() {
   return (

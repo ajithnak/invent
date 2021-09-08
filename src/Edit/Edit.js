@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../Product/StateProvider';
 
 function Edit(props) {
   const { id, title, image, price, rating, stock, addToBasket } = props;
@@ -57,7 +57,6 @@ function Edit(props) {
               <Link className="btn btn-primary" to ={{pathname:"/detail/edit/"+id,
                      state:{fromDashboard : true}}}>
               Edit
-          
             </Link>
             </div>
               <div className='d-grid gap-2 col-6 mx-auto'>

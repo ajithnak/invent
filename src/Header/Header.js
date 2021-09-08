@@ -1,8 +1,8 @@
 import React from 'react';
-import ars from '../src/images/ARS-logos1.png';
+import ars from '../images/ARS-logos1.png';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './Header.css';
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../Product/StateProvider';
 import { Link } from 'react-router-dom';
 import Searchbox from './Searchbox';
 

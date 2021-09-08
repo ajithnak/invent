@@ -37,7 +37,7 @@ class Food extends React.Component {
                 title={i.title}
                 image={i.image}
                 price={i.price}
-                rating={5}
+                rating={parseInt(i.rating)}
                 stock={i.stock}
                 addToBasket={this.addToBasket}
               />

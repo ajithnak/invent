@@ -1,8 +1,7 @@
 import React from 'react';
-import './Beverages.css';
-import Product from './Product';
+import Product from '../Product/Product';
 
-class Beverages extends React.Component {
+class SearchProduct extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,14 +18,15 @@ class Beverages extends React.Component {
     });
   };
   getData = () => {
-    fetch('http://localhost:3001/Product?type=beverages')
+    fetch('http://localhost:3001/Product/'+ window.location.hash.split("/")[2])
       .then((res) => res.json())
-      .then((i) => this.setState({ data: i }));
+      .then((i) => this.setState({ data: [i] }));
   };
   componentDidMount() {
     this.getData();
   }
-  render() {
+  render() 
+  {
     return (
       <div style={{ marginTop: '5%' }} className='container'>
         <div class='row row-cols-1 row-cols-md-2 g-4'>
@@ -43,10 +43,12 @@ class Beverages extends React.Component {
               />
             );
           })}
-        </div>
-      </div>
+          
+            </div>
+          </div>
+    
     );
   }
 }
 
-export default Beverages;
+export default SearchProduct;

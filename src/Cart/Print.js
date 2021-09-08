@@ -1,8 +1,8 @@
 import React from 'react';
-import {useStateValue} from "./StateProvider";
+import {useStateValue} from "../Product/StateProvider";
 import CurrencyFormat from 'react-currency-format';
 import Printpdf from "./Printpdf";
-import {getBasketTotal} from "./Reducer";
+import {getBasketTotal} from "../Product/Reducer";
 
 function Print( ) {
     const[{basket}]= useStateValue();
