@@ -77,8 +77,8 @@ function Header() {
               </Link>
             </div>
           </div>
-
-          <span className='navbar-brand me-auto'>
+        <div className='row' >
+          <div className='navbar-brand me-auto col'>
             <Link to='/'>
               <img
                 src={ars}
@@ -88,16 +88,16 @@ function Header() {
                 alt=' '
               />
             </Link>
-          </span>
-          <Link to="/add">
-          <div>
-          <button type="button" class="btn btn-secondary btn-group me-2">AddProduct</button>
           </div>
+          <div className="col text-center" >
+          <Link to="/add">
+          <button type="button" className="btn btn-secondary btn-group me-2">AddProduct</button>
           </Link>
-         <div className="data">
+          </div>
+         <div className="data col">
           <Searchbox />
           </div>
-
+        </div>
           <Link to='/checkout'>
             <div className='basket'>
               <form className='d-flex'>

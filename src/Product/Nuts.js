@@ -30,7 +30,7 @@ class Nuts extends React.Component {
     
     return (
       <div style={{ marginTop: '5%' }} className='container'>
-        <div class='row row-cols-1 row-cols-md-2 g-4'>
+        <div className='row row-cols-1 row-cols-md-2 g-4'>
           {this.state.data.map((i, index) => {
             return (
               <Product
@@ -44,15 +44,15 @@ class Nuts extends React.Component {
               />
             );
           })}
-          <div class='card bg-light text-white'>
+          <div className='card bg-light text-white'>
             <img
               style={{ width: '50%', height: 'auto', marginTop: '4%' }}
               src={this.state.data[0]?.image}
-              class='card-img-top rounded mx-auto d-block'
+              className='card-img-top rounded mx-auto d-block'
               alt={`food_${1}`}
             />
             <div
-              class='card-img-overlay'
+              className='card-img-overlay'
               id='2'
               onMouseEnter={() => {
                 document.getElementById('2').style.backgroundImage =
@@ -62,13 +62,13 @@ class Nuts extends React.Component {
                 (document.getElementById('2').style.backgroundImage = '')
               }
             >
-              <h5 class='card-title'>Card title</h5>
-              <p class='card-text'>
+              <h5 className='card-title'>Card title</h5>
+              <p className='card-text'>
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
               </p>
-              <p class='card-text'>Last updated 3 mins ago</p>
+              <p className='card-text'>Last updated 3 mins ago</p>
             </div>
           </div>
         </div>

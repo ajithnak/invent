@@ -29,7 +29,7 @@ class Cooking extends React.Component {
   render() {
     return (
       <div style={{ marginTop: '5%' }} className='container'>
-        <div class='row row-cols-1 row-cols-md-2 g-4'>
+        <div className='row row-cols-1 row-cols-md-2 g-4'>
           {this.state.data.map((i, index) => {
             return (
               <Product

@@ -31,11 +31,11 @@ class Searchbox extends React.Component  {
     <div className="search">
     <div className='searchInputs'>
     
-            <div class="btn-group">
+            <div className="btn-group">
        <div  id="dropdownMenuClickableOutside" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"  >
     
       <input 
-              class="form-control me-2"
+              className="form-control me-2"
               type='search'
               placeholder='Search'
               aria-label='Search'
@@ -43,7 +43,7 @@ class Searchbox extends React.Component  {
             />
   </div>
 
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
+  <ul className="dropdown-menu" aria-labelledby="dropdownMenuClickableOutside">
     <li><div className="dataResult" >
       
         {this.state.filteredData.map((i,key ) => {

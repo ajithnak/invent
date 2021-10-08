@@ -44,7 +44,7 @@ class Printpdf extends React.Component {
   render() {
     return (
       <div>
-        <button type="button" class="btn btn-primary" onClick={() => this.exportPDF()}>Print</button>
+        <button type="button" className="btn btn-primary" onClick={() => this.exportPDF()}>Print</button>
       </div>
     );
   }

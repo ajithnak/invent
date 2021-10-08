@@ -8,25 +8,25 @@ function Product(props) {
   const [stockNum, setStockNum] = useState(stock);
   const [dummy, dispatch] = useStateValue();
   return (
-    <div class='col'>
-      <div class='card'>
+    <div className='col'>
+      <div className='card'>
         <img
           style={{ width: '50%', height: 'auto', marginTop: '4%' }}
           src={image}
-          class='card-img-top rounded mx-auto d-block'
+          className='card-img-top rounded mx-auto d-block'
           alt={`food_${id}`}
         />
-        <div class='card-body'>
-          <h5 class='card-title'>{title}</h5>
-          <p class='card-text'>Price: {price}</p>
-          <p class='card-text1'>Rating: {
+        <div className='card-body'>
+          <h5 className='card-title'>{title}</h5>
+          <p className='card-text'>Price: {price}</p>
+          <p className='card-text1'>Rating: {
             Array(rating)
             .fill()
             .map((_) => (
             <p>⭐</p>
             ))
           }</p>
-          <p class='card-text'>Stock: {stockNum}</p>
+          <p className='card-text'>Stock: {stockNum}</p>
           {stockNum === 0 ? (
             <div className='d-grid gap-2 col-6 mx-auto'>
               <button className='btn btn-danger' type='button' disabled>

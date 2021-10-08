@@ -8,23 +8,23 @@ function Print( ) {
     const[{basket}]= useStateValue();
     return (
         <div className="printbill">
-           <div class="d-grid gap-2 col-6 mx-auto">
-<button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
+           <div className="d-grid gap-2 col-6 mx-auto">
+<button type="button" className="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal">
  Print Bill
 </button>
 </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Invoice Bill</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal-dialog">
+    <div className="modal-content">
+      <div className="modal-header">
+        <h5 className="modal-title" id="exampleModalLabel">Invoice Bill</h5>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div className="modal-body">
       <div className="products">
     {basket?.map ((item) =>{
         return(
-      <table class="table table-bordered border-primary">
+      <table className="table table-bordered border-primary">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -59,8 +59,8 @@ function Print( ) {
  </div>
 
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <div><Printpdf/></div>
       </div>
     </div>
